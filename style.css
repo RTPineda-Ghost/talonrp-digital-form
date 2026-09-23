@@ -1,0 +1,857 @@
+/* =========================
+   TALONRP DIGITAL
+   WEBSITE PROJECT FORM
+========================= */
+
+:root {
+    --black: #07070b;
+    --dark: #0d0d14;
+    --card: #11111a;
+
+    --purple: #7c3aed;
+    --purple-light: #a855f7;
+
+    --blue: #2563eb;
+    --blue-light: #3b82f6;
+
+    --orange: #f97316;
+    --orange-light: #fb923c;
+
+    --white: #ffffff;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+
+    --border: rgba(139, 92, 246, 0.25);
+}
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Lucida Sans", "Segoe UI", sans-serif;
+
+    background:
+        radial-gradient(circle at 15% 10%,
+            rgba(124, 58, 237, 0.18),
+            transparent 35%),
+        radial-gradient(circle at 85% 30%,
+            rgba(37, 99, 235, 0.15),
+            transparent 35%),
+        var(--black);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.form-header {
+    text-align: center;
+
+    padding: 55px 20px 35px;
+
+    border-bottom: 1px solid var(--border);
+
+    background:
+        linear-gradient(135deg,
+            rgba(124, 58, 237, 0.08),
+            rgba(37, 99, 235, 0.05));
+}
+
+
+.logo {
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: var(--white);
+
+    margin-bottom: 8px;
+}
+
+
+.logo span {
+    color: var(--purple-light);
+}
+
+
+.form-header p {
+    color: var(--muted);
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.form-container {
+    width: min(100% - 40px, 950px);
+
+    margin: 0 auto;
+
+    padding: 60px 0 80px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.intro h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+
+    color: var(--white);
+
+    margin-bottom: 15px;
+
+    background: linear-gradient(90deg,
+            var(--purple-light),
+            var(--blue-light));
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.intro p {
+    max-width: 700px;
+
+    margin: 0 auto 10px;
+
+    color: var(--muted);
+}
+
+
+.required-note {
+    font-size: 0.85rem;
+}
+
+
+.required-note span,
+label span {
+    color: var(--orange);
+}
+
+
+/* =========================
+   FORM SECTIONS
+========================= */
+
+.form-section {
+    background: rgba(17, 17, 26, 0.88);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.section-number {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg,
+            var(--purple),
+            var(--blue));
+
+    color: var(--white);
+
+    font-weight: 700;
+
+    font-size: 0.9rem;
+}
+
+
+.section-heading h2 {
+    color: var(--white);
+
+    font-size: 1.45rem;
+
+    margin-bottom: 3px;
+}
+
+
+.section-heading p {
+    color: var(--muted);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   FORM GROUPS
+========================= */
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+label {
+    display: block;
+
+    color: var(--white);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+textarea {
+    width: 100%;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 10px;
+
+    background: #0a0a10;
+
+    color: var(--white);
+
+    padding: 13px 15px;
+
+    font-family: inherit;
+
+    font-size: 0.9rem;
+
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+
+textarea {
+    resize: vertical;
+
+    min-height: 100px;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: #5f6470;
+}
+
+
+input:focus,
+textarea:focus {
+    border-color: var(--purple-light);
+
+    box-shadow:
+        0 0 0 3px rgba(124, 58, 237, 0.12),
+        0 0 20px rgba(124, 58, 237, 0.08);
+}
+
+
+/* =========================
+   CHOICES
+========================= */
+
+.radio-group,
+.checkbox-group {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+
+.choice {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 14px;
+
+    margin: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    cursor: pointer;
+
+    font-weight: 400;
+
+    transition: 0.2s ease;
+}
+
+
+.choice:hover {
+    border-color: rgba(124, 58, 237, 0.5);
+
+    background: rgba(124, 58, 237, 0.07);
+}
+
+
+.choice input {
+    accent-color: var(--purple-light);
+
+    width: 16px;
+    height: 16px;
+
+    flex-shrink: 0;
+}
+
+
+.choice span {
+    color: var(--text);
+}
+
+
+/* =========================
+   FIELD NOTE
+========================= */
+
+.field-note {
+    color: var(--muted);
+
+    font-size: 0.78rem;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   MEDIA INFO
+========================= */
+
+.media-info {
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(124, 58, 237, 0.08),
+            rgba(37, 99, 235, 0.06));
+
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+
+.media-info h3 {
+    color: var(--white);
+
+    margin-bottom: 8px;
+
+    font-size: 1rem;
+}
+
+
+.media-info p {
+    color: var(--muted);
+
+    font-size: 0.85rem;
+
+    margin-bottom: 8px;
+}
+
+
+.media-info p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+.submit-section {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 35px;
+
+    margin-top: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(249, 115, 22, 0.25);
+
+    background:
+        linear-gradient(135deg,
+            rgba(124, 58, 237, 0.12),
+            rgba(37, 99, 235, 0.08));
+}
+
+
+.submit-section h2 {
+    color: var(--white);
+
+    margin-bottom: 5px;
+}
+
+
+.submit-section p {
+    color: var(--muted);
+
+    font-size: 0.85rem;
+}
+
+
+.submit-button {
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(135deg,
+            var(--orange),
+            var(--orange-light));
+
+    color: var(--white);
+
+    padding: 15px 24px;
+
+    font-family: inherit;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 8px 25px rgba(249, 115, 22, 0.2);
+
+    transition: 0.25s ease;
+}
+
+
+.submit-button span {
+    margin-left: 8px;
+
+    font-size: 1.1rem;
+}
+
+
+.submit-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(249, 115, 22, 0.3);
+}
+
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.success-message {
+    display: none;
+
+    width: 100%;
+
+    min-height: 350px;
+
+    padding: 60px 30px;
+
+    margin: 0 auto;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(124, 58, 237, 0.35);
+
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(124, 58, 237, 0.18),
+            transparent 55%),
+        var(--card);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4);
+
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+
+.success-message.show {
+    display: flex;
+}
+
+
+.success-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 80px;
+    height: 80px;
+
+    margin-bottom: 25px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(135deg,
+            var(--purple),
+            var(--blue));
+
+    color: var(--white);
+
+    font-size: 2.4rem;
+
+    box-shadow:
+        0 0 35px rgba(124, 58, 237, 0.35);
+}
+
+
+.success-message h2 {
+    color: var(--white);
+
+    font-size: 1.7rem;
+
+    margin-bottom: 10px;
+}
+
+
+.success-message p {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 0.95rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.form-footer {
+    text-align: center;
+
+    padding: 25px 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+    color: #666b75;
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .form-container {
+        width: min(100% - 24px, 950px);
+
+        padding-top: 40px;
+    }
+
+
+    .form-header {
+        padding: 40px 20px 30px;
+    }
+
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+
+    .form-section {
+        padding: 25px 20px;
+
+        border-radius: 14px;
+    }
+
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+
+    .section-number {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 1.2rem;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .radio-group,
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+
+
+    .submit-section {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        text-align: center;
+
+        padding: 28px 20px;
+    }
+
+
+    .submit-button {
+        width: 100%;
+    }
+}
+
+/* =========================
+   THANK YOU PAGE
+========================= */
+
+.thank-you-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+.thank-you-card {
+    width: min(100%, 700px);
+
+    padding: 70px 40px;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(124, 58, 237, 0.35);
+
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(124, 58, 237, 0.20),
+            transparent 55%),
+        var(--card);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+
+.thank-you-card .success-icon {
+    margin: 0 auto 25px;
+
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(135deg,
+            var(--purple),
+            var(--blue));
+
+    color: white;
+
+    font-size: 2.5rem;
+
+    box-shadow:
+        0 0 40px rgba(124, 58, 237, 0.35);
+}
+
+
+.thank-you-label {
+    color: var(--purple-light);
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.thank-you-card h1 {
+    color: white;
+
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    margin-bottom: 20px;
+}
+
+
+.thank-you-text {
+    max-width: 580px;
+
+    margin: 0 auto 12px;
+
+    color: var(--muted);
+
+    font-size: 0.95rem;
+}
+
+
+.back-button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(135deg,
+            var(--orange),
+            var(--orange-light));
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+
+.back-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(249, 115, 22, 0.3);
+}
+
+
+@media (max-width: 600px) {
+
+    .thank-you-page {
+        padding: 20px;
+    }
+
+    .thank-you-card {
+        padding: 50px 25px;
+    }
+
+}
